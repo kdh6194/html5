@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블관련 태그</title>
+    <style>  /* embed css style */
+        table { outline: 1px solid black; width: 950px;
+                  outline-offset: -1px}
+        th, td { outline: 1px solid black; padding: 10px}
+
+        tr:nth-child(even) {background : aliceblue}
+        tr:nth-child(odd) {background : aquamarine}
+        tr:first-child {background: beige}
+        tr {height:35px}
+
+        table:nth-of-type(2) {width : 450px}
+        /* 모범 답안 테이블에 대한 스타일 - 너비지정*/
+        table:nth-of-type(8) {width : 850px}
+        table:nth-of-type(8) td {width : 141px}
+        table:nth-of-type(8) th {width : 141px}
+        /*모범 답안 안쪽 테이블에 대한 스타일 - 너비지정*/
+        table:nth-of-type(8) table th {width : 121px}
+        table:nth-of-type(8) table td {width : 121px}
+    </style>
+</head>
+<body>
+      <h1>테이블관련 태그</h1>
+      <h2>개요</h2>
+      <p>여러 종류의 데이터를 일목요연하게 2차원형태의 표로
+          나타내기 위해 사용하는 요소</p>
+      <p>table태그로 테이블 시작을, tr태그로 테이블의 행을,
+          th태그로 테이블의 제목을, td태그는 테이블의 본문을 나타냄</p>
+      <p>테이블의 디자인 관련 속성은 css를 이용
+          (width, height, padding, border-collapse)</p>
+
+      <h3>사원 테이블</h3>
+          <table>
+            <tr>
+                  <th>사원번호</th>
+                  <th>이름</th>
+                  <th>성</th>
+                  <th>이메일</th>
+                  <th>전화번호</th>
+                  <th>입사일</th>
+                  <th>직책</th>
+                  <th>연봉</th>
+                  <th>수당</th>
+                  <th>상사번호</th>
+                  <th>부서번호</th>
+                </tr>
+            <tr>
+                      <td>100</td>
+                      <td>Steven</td>
+                      <td>King</td>
+                      <td>SKing</td>
+                      <td>123.4567.6789</td>
+                      <td>2003-06-17</td>
+                      <td>AD_PRES</td>
+                      <td>24000</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>90</td>
+                    </tr>
+            <tr>
+                      <td>100</td>
+                      <td>Steven</td>
+                      <td>King</td>
+                      <td>SKing</td>
+                      <td>123.4567.6789</td>
+                      <td>2003-06-17</td>
+                      <td>AD_PRES</td>
+                      <td>24000</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>90</td>
+                    </tr>
+            <tr>
+                      <td>100</td>
+                      <td>Steven</td>
+                      <td>King</td>
+                      <td>SKing</td>
+                      <td>123.4567.6789</td>
+                      <td>2003-06-17</td>
+                      <td>AD_PRES</td>
+                      <td>24000</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>90</td>
+                    </tr>
+            <tr>
+                      <td>100</td>
+                      <td>Steven</td>
+                      <td>King</td>
+                      <td>SKing</td>
+                      <td>123.4567.6789</td>
+                      <td>2003-06-17</td>
+                      <td>AD_PRES</td>
+                      <td>24000</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>90</td>
+                    </tr>
+            <tr>
+                      <td>100</td>
+                      <td>Steven</td>
+                      <td>King</td>
+                      <td>SKing</td>
+                      <td>123.4567.6789</td>
+                      <td>2003-06-17</td>
+                      <td>AD_PRES</td>
+                      <td>24000</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>90</td>
+                    </tr>
+            <tr>
+                      <td>100</td>
+                      <td>Steven</td>
+                      <td>King</td>
+                      <td>SKing</td>
+                      <td>123.4567.6789</td>
+                      <td>2003-06-17</td>
+                      <td>AD_PRES</td>
+                      <td>24000</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>90</td>
+                    </tr>
+          </table>
+
+      <h2>복잡한 표 만들기</h2>
+      <p>복잡한 형태의 테이블을 작성하려면
+          colspan/rowspan 속성을 적절히 사용하면 됨</p>
+      <p>colspan은 여러 열을 합쳐 하나의 열로 만드는 것이고
+          rowspan은 여러행을 합쳐 하나의 행으로 만드는 것</p>
+      <p>더 복잡한 표를 만들기 위해
+        표안에 표를 포함시킬수도 있음 (비추) </p>
+
+      <h3>복잡한 표</h3>
+      <img src="img/42oovofm.bmp" width="40%" height="40%">
+      <table>
+          <tr>
+              <th colspan="5">1</th>
+              <!--<th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th> 실제로는 지우는게 맞다-->
+          </tr>
+          <tr>
+              <th rowspan="2">6</th>
+              <th rowspan="2">7</th>
+              <th rowspan="2">8</th>
+              <th colspan="2" rowspan="2" >9</th>
+              <!--<th >10</th>-->
+          </tr>
+          <tr>
+              <!--<th>11</th>-->
+              <!--<th>12</th>-->
+              <!--<th>13</th>-->
+              <!--<th>14</th>-->
+              <!--<th>15</th>-->
+          </tr>
+          <tr>
+              <th colspan="2">16</th>
+              <!--<th>17</th>-->
+              <th colspan="3">18</th>
+              <!--<th>19</th>-->
+              <!--<th>20</th>-->
+          </tr>
+          <tr>
+              <th colspan="3">21</th>
+              <!--<th>22</th>-->
+              <!--<th>23</th>-->
+              <th colspan="2">24</th>
+              <!--<th>25</th>-->
+          </tr>
+      </table>
+
+      <h2>테이블 너비 지정</h2>
+      <p>테이블 요소의 크기를 지정하는 단위는 px, %임</p>
+      <p>크기를 px로 지정하는 경우 고정크기로 설정되어
+        브라우저의 크기에 상관없이 테이블의 크기는 변화없음</p>
+      <p>크기를 %로 지정하는 경우 가변크기로 설정되어
+          브라우저의 크기에 따라 테이블의 크기는 변화없음</p>
+
+      <table style="width: 750px; outline: 1px solid red">
+          <tr><td>테이블1 (750px)</td></tr>
+      </table>
+
+      <table style="width: 63%; outline: 1px solid blue">
+          <tr><td>테이블2 (63%)</td></tr>
+      </table>
+
+      <h3>복잡한 표2</h3>
+        <table>
+            <tr>
+                <td style="text-align:center;">훈련과정</td>
+                <!--<td></td>-->
+                <td colspan="2"  style="text-align:center;">빅데이터분석
+                    AI&RPA솔루션 개발</td>
+                <td colspan="2"  style="text-align:center;">훈련기간</td>
+                <td colspan="6"  style="text-align:center;">2022-04-18 ~ 2022-10-19</td>
+                <!--<td></td>-->
+
+
+            </tr>
+            <tr>
+                <td style="text-align:center;">평가일시</td>
+                <td style="text-align:center;">2022년 05월 04일</td>
+                <td style="text-align:center;">훈련생</td>
+                <td colspan="2"  style="text-align:right;">(인)</td>
+                <!--<td></td>-->
+                <td colspan="3"  style="text-align:center;">훈련교사</td>
+                <!--<td></td>-->
+                <td colspan="3" style="text-align:center;">홍 길 동(인)</td>
+                <!--<td></td>-->
+            </tr>
+        </table>
+            <table>
+            <tr>
+                <td colspan="4"  style="text-align:center;">교과목명</td>
+                <td style="text-align:center;">평가방법</td>
+                <td style="text-align:center;">배점</td>
+                <td style="text-align:center;">점수</td>
+                <td colspan="2" style="text-align:center;">총점</td>
+                <!--<td></td>-->
+                <td style="text-align:center;">성취수준</td>
+                <!--<td></td>-->
+            </tr>
+                <tr>
+                    <td colspan="4" rowspan="2"  style="text-align:center;">데이터베이스</td>
+                    <td style="text-align:center;">서술형/선택형</td>
+                    <td style="text-align:center;">30</td>
+                    <td></td>
+                    <td colspan="2" rowspan="2"></td>
+                    <!--<td></td>-->
+                    <td rowspan="2"></td>
+                    <!--<td></td>-->
+                </tr>
+                <tr>
+                    <!--<td></td>-->
+                    <td style="text-align:center;">포트폴리오</td>
+                    <td style="text-align:center;">70</td>
+                    <td></td>
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                </tr>
+            </table>
+                <table>
+                    <tr>
+                        <td style="text-align:center;">성취수준 환산</td>
+                        <td style="text-align:center;">매우 우수(5수준)</td>
+                        <td style="text-align:center;">우수(4수준)</td>
+                        <td style="text-align:center;">보통(3수준)</td>
+                        <td style="text-align:center;">미흡(2수준)</td>
+                        <td style="text-align:center;">매우미흡(1수준)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">성취기준</td>
+                        <td style="text-align:center;">90~100점</td>
+                        <td style="text-align:center;">80~89점</td>
+                        <td style="text-align:center;">70~79점</td>
+                        <td style="text-align:center;">60~69점</td>
+                        <td style="text-align:center;">60점미만</td>
+                    </tr>
+                </table>
+
+
+      <h3>복잡한 표2 모범답안</h3>
+      <table>
+          <tr>
+              <th style="text-align:center;">훈련과정</th>
+              <td colspan="2" style="text-align:center;">AWS 클라우드기반 자바&amp;스프링&amp;<br>리엑트
+                  풀스택 개발자 양성</td>
+              <th style="text-align:center;">훈련기간</th>
+              <td colspan="2" style="text-align:center;">2022-12-19 ~ 2023-06-09</td>
+          </tr>
+          <tr>
+              <th style="text-align:center;">평가일시</th>
+              <td style="text-align:center;">2023년 01월 4일</td>
+              <th style="text-align:center;">훈련생</th>
+              <td style="text-align:center;">홍 길동</td>
+              <th style="text-align:center;">훈련교사</th>
+              <td style="text-align:center;">홍 길동(인)</td>
+          </tr>
+          <tr>
+              <td colspan="6" style="padding: 0">
+                  <table style="outline: 1px solid black; margin: -2px">
+                      <tr>
+                          <th colspan="2" style="text-align:center;">교과목명</th>
+                          <!--<th></th>-->
+                          <th style="text-align:center;">평가방법</th>
+                          <th style="text-align:center;">배점</th>
+                          <th style="text-align:center;">점수</th>
+                          <th style="text-align:center;">총점</th>
+                          <th style="text-align:center;">성취수준</th>
+                      </tr>
+                      <tr>
+                          <th colspan="2" rowspan="2" style="text-align:center;">데이터베이스</th>
+                          <td style="text-align:center;">서술형/선택형</td>
+                          <td style="text-align:center;">30</td>
+                          <td>&nbsp;</td>
+                          <td rowspan="2" style="text-align:center;"></td>
+                          <td rowspan="2" style="text-align:center;"></td>
+                      </tr>
+                      <tr>
+                          <td style="text-align:center;">포트폴리오</td>
+                          <td style="text-align:center;">70</td>
+                          <td>&nbsp;</td>
+                      </tr>
+                  </table>
+              </td>
+
+          </tr>
+          <tr>
+              <th style="text-align:center;">성취수준 환산</th>
+              <th style="text-align:center;">매우우수(5수준)</th>
+              <th style="text-align:center;">우수(4수준)</th>
+              <th style="text-align:center;">보통(3수준)</th>
+              <th style="text-align:center;">미흡(2수준)</th>
+              <th style="text-align:center;">매우미흡(1수준)</th>
+          </tr>
+          <tr>
+              <th style="text-align:center;">성취기준</th>
+              <td style="text-align:center;">90~100점</td>
+              <td style="text-align:center;">80~89점</td>
+              <td style="text-align:center;">70~79점</td>
+              <td style="text-align:center;">60~69점</td>
+              <td style="text-align:center;">60점미만</td>
+          </tr>
+      </table>
+
+</body>
+</html>
