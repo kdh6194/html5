@@ -5,6 +5,7 @@
     <title>폼관련 태그</title>
     <style>
         label {font-weight: bold}
+        input:invalid {border-color:red}
     </style>
 <!--label {font-weight: bold}은 라벨의 이름을 짙게 설정한다-->
 </head>
@@ -140,22 +141,96 @@
               <legend>개인 정보 입력</legend>
               <div><label for="name">이름</label>
                 <input type="text" name="name" id="name"> </div>
-              <div><label for="civilno">이름</label>
+              <div><label for="civilno">주민번호</label>
                   <input type="text" name="civilno" id="civilno"> </div>
               <div><label for="uid5">아이디</label>
                   <input type="text" name="userid" id="uid5"></div>
               <div><label for="pwd5">비밀번호</label>
                   <input type="password" name="passwd" id="pwd5"></div>
-              <div><label>성별</label>
+              <div id="gender"><label>성별</label>
                 <input type="radio" name="gender" value="1">남
                   <input type="radio" name="gender" value="2">여</div>
-              <div><label>관심사</label>
-                <input type="checkbox" name="interest" value="1">연예
-                <input type="checkbox" name="interest" value="2">스포츠
-                <input type="checkbox" name="interest" value="3">IT
+              <div><label for="interest" for="interest1" for="interest2">관심사</label>
+                <input type="checkbox" name="interest" id="interest" value="1">연예
+                <input type="checkbox" name="interest" id="interest1" value="2">스포츠
+                <input type="checkbox" name="interest" id="interest2" value="3">IT
               </div>
-              <div><button type="submit">submit</button><button type="reset">reset</button></div>
+              <div><button type="submit">submit</button>
+                  <button type="reset">reset</button></div>
           </fieldset>
+
+          <fieldset>
+              <legend>추가정보</legend>
+              <div><label>이메일</label>
+              <input type="text" name="email1" id="email">
+              @<select name="email2">
+                  <option>--선택하세요--</option>
+                  <option>google.com</option>
+                  <option>naver.com</option>
+                  <option>gmail.com</option>
+                  <option>daum.net</option>
+                  </select></div>
+              <div><label for="city">주소</label>
+                  <select name="city" id="city">
+                      <option>--선택하세요--</option>
+                      <option>서울</option>
+                      <option>경기</option>
+                      <option>인천</option>
+                      <option>대전</option>
+                  </select>
+              <label for="gu">구</label>
+                  <select name="gu" id="gu">
+                      <option>--선택하세요--</option>
+                      <option>강남구</option>
+                      <option>종로구</option>
+                      <option>구로구</option>
+                      <option>분당구</option>
+                  </select>
+                  <label for="dong">동</label>
+                      <select name="dong" id="dong">
+                          <option>--선택하세요--</option>
+                          <option>논현동</option>
+                          <option>인사동</option>
+                          <option>구로1동</option>
+                          <option>수내1동</option>
+                      </select>
+              </div>
+              <div><label>가입인사</label>
+              <textarea name="intro" id="intro" cols="45" rows="5"></textarea></div>
+              <div><label>아이콘</label>
+              <input type="file" name="icon" id="icon"></div>
+              <div><label>자동가입방지</label>
+                <img src="img/captcha.png"></div>
+          </fieldset>
+      </form>
+
+        <h2>공통 input 속성</h2>
+      <p>value:폼 요소에 기본값 지정</p>
+      <p>readonly 폼요소에 입력한 값을 수정할 수 없게 만드는 마크업</p>
+      <p>disabled 폼요소가 서버로 전송되지 못하게 막음
+          일반적인 기능도 안되고 수정도 하지 못하게끔한다</p>
+      <p>placeholder 폼 요소내에 레이블을 표시할 수 있게 하는역할을 한다</p>
+      <p>size, maxlenght 폼 요소의 너비와 입력가능 최대 글자수를 지정 </p>
+      <p>required 반드시 입력해야 하는지 여부 지정</p>
+      <p>https://developer.mozilla.org/ko/docs/Web/HTML/Element
+        html 기본적인 태그들을 참고할 수 있는 웹페이지이다</p>
+
+      <form>
+          <div>주민번호
+          <input type="text" name="jumin" readonly
+          value="123456-1234567"></div>
+          <div>주민번호2
+              <input type="text" name="jumin2"
+                     value="123456-1234567" disabled></div>
+          <div><input type="text" name="jumin3"
+               placeholder="주민번호" required></div>
+          <div>아이디<input type="text" name="uid6"
+                        maxlength="18"></div>
+          <div>우편번호<input type="text" name="zip1"
+                          maxlength="5" size="1">-<input type="text" name="zip2"
+                                                 maxlength="3" size="1"></div>
+
+          <div><button type="submit">전송하기</button></div>
       </form>
 
 </body>
