@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>join</title>
+    <style>
+        table {margin-left:auto;margin-right:auto;}
+        th {text-align: right;padding: 10px}
+    </style>
+</head>
+<body>
+    <header><h1>JSP 프로젝트 v1</h1>
+        <table>
+            <tr>
+                <td style="text-align: center; width: 10%;"><a href="index.html">Home</a></td>
+                <td style="text-align: center; width: 10%;"><a href="join.html">회원가입</a></td>
+                <td style="text-align: center; width: 10%;"><a href="login.html">로그인</a></td>
+                <td style="text-align: center; width: 10%;"><a href="list.html">게시판</a></td>
+                <td style="text-align: center; width: 10%;"><a href="myinfo.html">회원정보</a></td>
+            </tr>
+        </table>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <div>
+                <h2>회원가입</h2>
+                    <table>
+                        <tr>
+                            <th>아이디</th>
+                            <td rowspan="6"></td>
+                            <td><label for="uid"></label>
+                                <input type="text" name="id" id="uid"></td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td><label for="passwd"></label>
+                                <input type="password" name="passwd" id="passwd"></td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호 확인</th>
+                            <td><label for="repasswd"></label>
+                                <input type="password" name="repasswd" id="repasswd"></td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td><label for="name"></label>
+                                <input type="text" name="name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td><label for="email"></label>
+                                <input type="text" name="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td><button type="button">입력 완료</button>
+                                <button type="reset">다시 입력</button></td>
+                        </tr>
+                    </table>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer><div style="text-align: center">Copyright &copy; 2023. All Right Reserved</div></footer>
+</body>
+</html>

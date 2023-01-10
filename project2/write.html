@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+    <style>
+        table {margin-left:auto;margin-right:auto;}
+        th:first-child {text-align: center}
+    </style>
+</head>
+<body>
+<header><h1>JSP 프로젝트 v1</h1>
+    <table>
+        <tr>
+    <td style="text-align: center; width: 10%;"><a href="index.html">Home</a></td>
+    <td style="text-align: center; width: 10%;"><a href="join.html">회원가입</a></td>
+    <td style="text-align: center; width: 10%;"><a href="login.html">로그인</a></td>
+    <td style="text-align: center; width: 10%;"><a href="list.html">게시판</a></td>
+    <td style="text-align: center; width: 10%;"><a href="myinfo.html">회원정보</a></td>
+        </tr>
+    </table>
+</header>
+<hr>
+<main>
+    <section>
+        <h2>게시판 본문글</h2>
+        <table>
+            <tr>
+                <th>제 목</th>
+                <td rowspan="5"></td>
+                <td><label for="title"></label>
+                    <input type="text" name="title" id="title"></td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td><label for="writer"></label>
+                    <input type="text" name="writer" id="writer"></td>
+            </tr>
+            <tr>
+                <th>작성게시판</th>
+                <td><label for="writerdate"></label>
+                    <select name="writerdate" id="writerdate">
+                        <option>--게시판--</option>
+                        <option>정보게시판</option>
+                        <option>유머게시판</option>
+                        <option>비밀게시판</option>
+                        <option>자유게시판</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>본문</th>
+                <td><label for="detail"></label>
+                    <textarea name="detail" id="detail" cols="70" rows="25"></textarea>
+            </tr>
+            <tr>
+                <th></th>
+                <td><button type="button">작성완료</button>
+                    <button type="button">작성취소</button></td>
+            </tr>
+        </table>
+    </section>
+</main>
+<hr>
+<footer><div style="text-align: center">Copyright &copy; 2023. All Right Reserved</div></footer>
+</body>
+</html>
